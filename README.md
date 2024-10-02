@@ -1,4 +1,4 @@
-# Lab Template
+# Lab Template for ART101
 File tempate for basic HTML, CSS, and JavaScript classes
 
 ## Basic Structure
