@@ -12,7 +12,7 @@
 h1 {
   color: purple;
   font-size: 200%;
-  }
+}
 
 p {
   text-indent: 20px;
@@ -21,4 +21,10 @@ p {
 
 #content {
   border: dashed 2px #444444;
+}
+
+
+.img-class {
+  margin: 10px;
+  max-width: 400px;
 }
