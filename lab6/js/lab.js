@@ -20,7 +20,7 @@ var myMainRide = { // Defining Variables
   }  
 } 
 
-//output
+//output:
 document.writeln("My Transports: " + myTransport + "<br>");
 //object to doc:
 document.writeln("My Main Ride: <pre>",
