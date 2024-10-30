@@ -4,6 +4,8 @@
  * @date October 24, 2024
  */
 
+//got help on this assignment from claude ai
+
 // Function to sort the letters of a name
 function sortUserName() {
   // Get user input using window.prompt()
@@ -28,4 +30,3 @@ document.writeln("<div class='sorted-name'>",
               sortUserName(),
               "</div>");
 
-              
