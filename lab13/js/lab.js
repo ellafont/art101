@@ -1,8 +1,9 @@
 /*
- * lab.js - implementation for Lab 12
- * 
+ * lab.js - jQuery implementation for Lab 13
+ *
  * @author Ella
  * @date Nov 12th 2024
+ * Requirements: jQuery must be loaded for this script to work
  */
 
 // Sorts the characters of a string in alphabetical order.
