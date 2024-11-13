@@ -3,7 +3,7 @@
  * Adds interactive buttons to toggle special styling on page sections
  * 
  * @author Ella
- * @date Nov 8th 2024
+ * @date Nov 12th 2024
  * Requirements: jQuery must be loaded for this script to work
  */
 
