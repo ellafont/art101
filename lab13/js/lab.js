@@ -1,48 +1,62 @@
 /*
- * lab.js - jQuery implementation for Lab 13
- *
+ * lab.js - FizzBuzz implementation for Lab 13
  * @author Ella
- * @date Nov 12th 2024
- * Requirements: jQuery must be loaded for this script to work
+ * @date November 18, 2024
+ * got help from claude ai.
  */
 
-// Sorts the characters of a string in alphabetical order.
-function sortString(inputString) {
-    // We have to convert our string to an array and back again to sort it
-    return inputString.split('').sort().join('');
-}
+// Define constants for better maintainability
+const FACTORS = {
+    3: "Fizz",
+    5: "Buzz",
+    7: "Boom"
+};
 
-function sortingHat(str) {
-    var length = str.length; 
-    console.log(length);
-
-    var mod = length % 4;
-    if (mod == 0) {
-        return "Gryffindor";
-    }
-    if (mod == 1){
-        return "Ravenclaw";
-    }
-    if (mod == 2){
-        return "Slytherin";
-    }
-    if (mod == 3){
-        return "Hufflepuff";
-    }
-
-}
-
-// click listener for button
-$("#submit").click(function(){
-    // get value of input field
-    const userName = $("#user-name").val();
-    // run conditional function on name
-    var house = sortingHat(userName);
+function fizzBuzzBoom(maxNumber) {
+    // Clear previous output
+    $("#output").empty();
     
-    // append a new div to our output div
-    $("#output").html('<div class="text"><p>' + "The Sorting Hat has sorted you into " + house + '</p></div>');
+    // Loop through numbers 1 to maxNumber
+    for (let i = 1; i <= maxNumber; i++) {
+        let output = "";
+        let classes = [];
+        
+        // Check for multiples of 3, 5, and 7
+        for (let factor in FACTORS) {
+            if (i % factor === 0) {
+                output += FACTORS[factor];
+                classes.push(FACTORS[factor].toLowerCase());
+            }
+        }
+        
+        // If no special cases, just use the number
+        if (output === "") {
+            output = i;
+        } else {
+            output = i + ": " + output + "!";
+            if (classes.length > 1) {
+                classes = ["multiple"];
+            }
+        }
+        
+        // Create the output element with appropriate classes
+        const element = $("<p>")
+            .text(output)
+            .addClass(classes.join(" "));
+        
+        // Append to output div
+        $("#output").append(element);
+    }
+}
 
+// Add click handler for the run button
+$(document).ready(function() {
+    $("#runButton").click(function() {
+        const maxNumber = parseInt($("#maxNumber").val()) || 200;
+        fizzBuzzBoom(Math.min(maxNumber, 1000)); // Limit to 1000 for performance
+    });
+    
+    // Run once on page load
+    fizzBuzzBoom(200);
 });
-
-
 
