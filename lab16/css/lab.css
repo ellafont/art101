@@ -8,6 +8,14 @@ body {
   background-color: #f0f0f0;
 }
 
+.minor-section {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #888;
+  font-family: Figtree;
+  background-color: #b6b3c6;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
